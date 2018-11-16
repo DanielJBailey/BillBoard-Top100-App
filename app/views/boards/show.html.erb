@@ -1,1 +1,24 @@
-<h1><%= @board.name %></h1>
+
+<div class="table-container">
+<h1>Top 100 <%= " #{@board.name}" %></h1>
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Position</th>
+                <th>Artist</th>
+            </tr>
+            <% @counter = 1 %>
+            <% @artists.each do | artist | %>
+                <tr>
+                    <td class="position"><%= @counter %></td>
+                    <td class="artist-name"><%= link_to artist.name, artist_path(artist) %></td>
+                </tr>
+                <% @counter += 1 %>
+            <% end %>
+            
+        </tbody>
+    </table>
+    <%= link_to "Edit Board Name", edit_board_path(@board), class: "edit-board-name" %>
+</div>

@@ -1,4 +1,124 @@
-.back-button {
-    padding: 30px;
+.boards-container {
+    display: flex;
+    padding: 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        .board {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3436;
+            border-radius: 10px;
+            transition: 0.5s;
+            box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+    .create-board-link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1em;
+        cursor: pointer;
+        margin: 1em;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #2d3436;
+        font-weight: 400;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+        }
+    }
 }
 
+@media (max-width: 768px) {
+    .boards-container {
+        padding: 100px 0;
+    }
+}
+
+.table-container {
+    padding: 100px 0;
+    width: 100%;
+    position: relative;
+    .edit-board-name {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1em;
+        cursor: pointer;
+        margin: 1em;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #2d3436;
+        font-weight: 400;
+        text-decoration: none;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+        }
+    }
+    h1 {
+        text-align: center;
+        padding: 50px 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        &:before {
+            content: '';
+            display: block;
+            background-color: yellow;
+            width: 100px;
+            height: 10px;
+            margin: 0 auto 10px;
+        }
+    }
+    table {
+        padding: 50px 0;
+        margin: 0 auto;
+        width: auto;
+        th {
+            text-align: center;
+            background-color: lightgrey;
+            padding: 10px;
+            color: #2d3436;
+            font-weight: 300;
+        }
+        tr {
+            &:nth-child(odd) {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+        .artist-name,
+        .position {
+            text-align: center;
+            padding: 5px 0;
+            text-decoration: none;
+            a {
+                color: #2d3436;
+            }
+        }
+        .artist-name {
+            text-align: left;
+            padding: 10px 20px;
+        }
+    }
+}

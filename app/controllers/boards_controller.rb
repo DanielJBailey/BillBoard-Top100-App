@@ -6,7 +6,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    #render :show
+    @artists = @board.artists.all
   end
 
   def new
