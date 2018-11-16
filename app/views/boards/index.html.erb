@@ -1,2 +1,11 @@
-<h1>Boards#index</h1>
-<p>Find me in app/views/boards/index.html.erb</p>
+
+<div class="boards-container">
+        <% @boards.each do |board| %>
+            <%= link_to board_path(board), :index => 'go' do %>
+                <div class="board">
+                    <%= board.name %>
+                </div>
+            <% end %>
+        <% end %>
+        <%= link_to "Create Board", new_board_path, class: "create-board-link" %>
+</div>

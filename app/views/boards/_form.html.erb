@@ -1,0 +1,4 @@
+<%= form_with(model: board, local: true, class: "form") do |f| %>
+    <%= f.text_field :name, required: true, placeholder: "Board Name:" %>
+    <%= f.submit %>
+<% end %>

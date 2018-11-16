@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.navigation {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        transition: 0.3s linear;
+        background-color: rgba(0,0,0,0.2);
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+
+            li {
+                padding: 30px;
+                
+                &:hover {
+                    background-color: rgba(0,0,0,0.4);
+                    color: white;
+                }
+            }
+        } // End Link
+
+    } /// End UL For Navigation
+} /// End Navigation
+
+.boards-container {
+    display: flex;
+    padding: 2em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+
+        .board {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3436;
+            border-radius: 10px;
+            transition: 0.5s;
+            box-shadow: 5px 10px 25px rgba(0,0,0,0.3);
+            cursor: pointer; 
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+    
+
+    .create-board-link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1em;
+        cursor: pointer;
+        margin: 1em;
+        background-color: rgba(0,0,0,0.2);
+        color: #2d3436;
+        font-weight: 400;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.4);
+            color: white;
+        }
+    }
+}
+
+.back-button {
+    padding: 20px 30px;
+    background-color: rgba(0,0,0,0.2);
+}

@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <div class="navigation">
+      <ul>
+        <%= link_to boards_path, :index => 'go' do %>
+          <li>Boards</li>
+        <% end %>
+        <%= link_to artists_path, :index => 'go' do %>
+          <li>Artists</li>
+        <% end %>
+      </ul>
+    </div>
     <%= yield %>
   </body>
 </html>
+
