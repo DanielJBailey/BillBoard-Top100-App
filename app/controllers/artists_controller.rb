@@ -6,7 +6,8 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    # render :show
+    @songs = @artist.songs.all
+    @board = Board.find(params[:board_id])
   end
 
   def new

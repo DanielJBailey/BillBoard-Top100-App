@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   before_action :set_board, except: [:index, :new, :create]
 
   def index
-    @boards = Board.all
+    @boards = Board.all.order("name")
   end
 
   def show

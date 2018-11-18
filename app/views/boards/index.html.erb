@@ -1,11 +1,11 @@
-
-<div class="boards-container">
-        <% @boards.each do |board| %>
-            <%= link_to board_path(board), :index => 'go' do %>
-                <div class="board">
-                    <%= board.name %>
-                </div>
-            <% end %>
+<div class="board-container">
+    <% @boards.each do |board| %>
+        <%= link_to board_path(board), :index => 'go' do %>
+            <div class="board">
+                <%= board.name %>
+            </div>
         <% end %>
-        <%= link_to "Create Board", new_board_path, class: "create-board-link" %>
+    <% end %>
 </div>
+<%= link_to "Create Board", new_board_path, class: "body-button" %>
+
