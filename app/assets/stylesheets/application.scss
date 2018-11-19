@@ -44,14 +44,9 @@ body {
             text-decoration: none;
             color: #fff;
             font-size: 18px;
-
-            li {
-                padding: 30px;
-                
-                &:hover {
-                    background-color: rgba(0,0,0,0.4);
-                    color: white;
-                }
+            padding: 30px;
+            &:hover {
+                background-color: rgba(0,0,0,0.2);
             }
         } // End Link
 
@@ -63,7 +58,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     position: relative;
@@ -115,6 +110,189 @@ body {
             background-color: rgba(0,0,0,0.2);
         } 
     }
+
+    .heading {
+        font-size: 40px;
+        padding: 50px 0;
+        margin-top: 100px;
+        color: white;
+        background-color: rgba(0,0,0,0.1);
+        width: 100%;
+        text-align: center;
+        &:before {
+            content: '';
+            display: block;
+            background-color: #6c5ce7;
+            width: 100px;
+            height: 10px;
+            margin: 0 auto 10px;
+        }
+    }
+
+    .log-in-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .new_user {
+            padding: 50px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            .email, .password {
+                width: 300px;
+                padding: 20px;
+                margin: 10px;
+                border: none;
+                outline: none;
+                background-color: rgba(0, 0, 0, 0.05);
+                color: white;
+                font-size: 18px;
+                &::placeholder {
+                    font-size: 16px;
+                }
+            }
+
+            .submit {
+                border-radius: 5px;
+                font-size: 18px;
+                width: 300px;
+                padding: 20px 0;
+                margin: 20px 0 0;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                background-color: rgba(0,0,0,0.4);
+                color: white;
+                &:hover {
+                    background-color: rgba(0,0,0,0.6);
+                }
+            }
+        }
+
+        .sign-up {
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0 0;
+            font-size: 18px;
+            width: 300px;
+            border: none;
+            text-align: center;
+            padding: 20px 0;
+            cursor: pointer;
+            outline: none;
+            background-color: #6c5ce7;
+            color: #fff;
+        }
+
+
+        .forgot {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+
+    .sign-up-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .new_user {
+            padding: 50px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+    
+            .email, .password {
+                width: 300px;
+                padding: 20px;
+                margin: 10px;
+                border: none;
+                outline: none;
+                background-color: rgba(0, 0, 0, 0.05);
+                color: white;
+                font-size: 18px;
+                &::placeholder {
+                    font-size: 16px;
+                }
+            }
+
+            .sign-up {
+                text-decoration: none;
+                border-radius: 5px;
+                margin: 20px 0 0;
+                font-size: 18px;
+                width: 300px;
+                border: none;
+                text-align: center;
+                padding: 20px 0;
+                cursor: pointer;
+                outline: none;
+                background-color: #6c5ce7;
+                color: #fff;
+            }
+
+            
+        }
+
+        .log-in {
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;  
+            width: 300px;
+            padding: 20px 0;
+            margin: 20px 0 0;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            outline: none;
+            background-color: rgba(0,0,0,0.4);
+            color: white;
+            &:hover {
+                background-color: rgba(0,0,0,0.6);
+            }
+        }
+
+        .sign-up {
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0 0;
+            font-size: 18px;
+            width: 300px;
+            border: none;
+            text-align: center;
+            padding: 20px 0;
+            cursor: pointer;
+            outline: none;
+            background-color: #6c5ce7;
+            color: #fff;
+        }
+    }
+
+    .password-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .new_user {
+            padding: 50px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
 }
 
 
