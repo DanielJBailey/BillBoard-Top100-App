@@ -10,8 +10,6 @@
 }
 
 body {
-    height: 100%;
-    width: 100%;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -26,9 +24,6 @@ body {
 
 .navigation {
     width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 99;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
     ul {
         width: 100%;
@@ -39,6 +34,13 @@ body {
         list-style: none;
         transition: 0.3s linear;
         background-color: rgba(0,0,0,0.4);
+
+        .welcome {
+            margin-right: auto;
+            padding-left: 30px;
+            color: white;
+            font-size: 18px;
+        }
 
         a {
             text-decoration: none;
@@ -55,7 +57,7 @@ body {
 
 .site-wrapper {
     height: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 81px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -66,8 +68,8 @@ body {
     .page-title {
         text-align: center;
         width: 100%;
-        margin-top: 100px;
         color: white;
+        margin: 10px 0 0;
         padding: 50px 0;
         background-color: rgba(0, 0, 0, 0.1);
         &:before {
@@ -87,12 +89,11 @@ body {
             right: 0;
             margin: 2em;
             padding: 20px;
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(0,0,0,0.8);
             text-decoration: none;  
-            color: #2d3436;
+            color: #fff;
             &:hover {
-                color: white;
-                background-color: rgba(0,0,0,0.4);
+                background-color: rgba(0,0,0,0.6);
             }
         }
     }
@@ -103,18 +104,18 @@ body {
         right: 0;
         margin: 2em;
         padding: 20px;
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0,0,0,0.8);
         text-decoration: none;  
         color: white;
         &:hover {
-            background-color: rgba(0,0,0,0.2);
+            background-color: rgba(0,0,0,0.6);
         } 
     }
 
     .heading {
         font-size: 40px;
         padding: 50px 0;
-        margin-top: 100px;
+        margin-top: 10px;
         color: white;
         background-color: rgba(0,0,0,0.1);
         width: 100%;
@@ -133,7 +134,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         
         .new_user {
             padding: 50px 0 0;
@@ -165,31 +166,20 @@ body {
                 border: none;
                 cursor: pointer;
                 outline: none;
-                background-color: rgba(0,0,0,0.4);
+                background-color: #6c5ce7;
                 color: white;
-                &:hover {
-                    background-color: rgba(0,0,0,0.6);
-                }
             }
         }
 
         .sign-up {
             text-decoration: none;
-            border-radius: 5px;
-            margin: 20px 0 0;
-            font-size: 18px;
-            width: 300px;
-            border: none;
-            text-align: center;
-            padding: 20px 0;
-            cursor: pointer;
-            outline: none;
-            background-color: #6c5ce7;
-            color: #fff;
+            color: black;
+            margin-top: 10px;
         }
 
 
         .forgot {
+            margin-top: 10px;
             text-decoration: none;
             color: black;
         }
@@ -201,9 +191,9 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 100px;
 
         .new_user {
-            padding: 50px 0 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -211,7 +201,7 @@ body {
 
 
     
-            .email, .password {
+            .email, .password, .name {
                 width: 300px;
                 padding: 20px;
                 margin: 10px;
@@ -244,21 +234,9 @@ body {
         }
 
         .log-in {
-            border-radius: 5px;
-            font-size: 18px;
-            text-decoration: none;  
-            width: 300px;
-            padding: 20px 0;
-            margin: 20px 0 0;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            outline: none;
-            background-color: rgba(0,0,0,0.4);
-            color: white;
-            &:hover {
-                background-color: rgba(0,0,0,0.6);
-            }
+            text-decoration: none;
+            color: black;
+            margin-top: 10px;
         }
 
         .sign-up {
@@ -289,6 +267,75 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            .label {
+                color: darkgray;
+                padding: 10px 0;
+                font-size: 14px;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .submit {
+                padding: 20px;
+                width: 300px;
+                margin: 10px 0;
+                border-radius: 5px;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                background-color: #6c5ce7;
+                color: white;
+            }
+
+            .email {
+                width: 300px;
+                padding: 20px;
+                margin: 10px;
+                border: none;
+                outline: none;
+                background-color: rgba(0, 0, 0, 0.05);
+                color: white;
+                font-size: 18px;
+                &::placeholder {
+                    font-size: 16px;
+                }
+            }
+
+            
+        }
+
+        .log-in {
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;  
+            width: 300px;
+            padding: 20px 0;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            outline: none;
+            background-color: rgba(0,0,0,0.4);
+            color: white;
+            &:hover {
+                background-color: rgba(0,0,0,0.6);
+            }
+        }
+        .sign-up {
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 18px;
+            width: 300px;
+            border: none;
+            text-align: center;
+            padding: 20px 0;
+            cursor: pointer;
+            outline: none;
+            background-color: #6c5ce7;
+            color: #fff;
         }
     }
 

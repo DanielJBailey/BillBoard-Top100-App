@@ -5,15 +5,23 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "email"%>
+      <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", placeholder: "Email", class: "email"%>
     </div>
 
     <div class="field">
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "password" %>
+      <%= f.text_field :first_name, required: true, placeholder: "First Name", class: "name"%>
     </div>
 
     <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password", class: "password"%>
+      <%= f.text_field :last_name, required: true, placeholder: "Last Name", class: "name"%>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, required: true, autocomplete: "new-password", placeholder: "Password", class: "password" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: "Confirm password", class: "password"%>
     </div>
 
     <div class="actions">
